@@ -4,7 +4,8 @@ const dom = (() => {
     const formWrapper = document.createElement('div');
     formWrapper.classList += 'form-main-wrapper';
     const form = document.createElement('form');
-    form.innerHTML = `<input type='text', placeholder='Enter your name'/> <button type='submit'>Send</button>`;
+    form.setAttribute('id', 'form');
+    form.innerHTML = `<input type='text' required class='name-input' placeholder='Enter your name'/> <button type='submit'>Send</button>`;
     formWrapper.appendChild(form);
     return container.appendChild(formWrapper);
   };
