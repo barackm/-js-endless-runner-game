@@ -9,6 +9,8 @@ window.onload = () => {
   dom.getPlayerInfo();
   submitInput();
   api.createGame();
+  api.getScores();
+  api.createScore('Barack', '300');
   // const game = api.createGame();
   // console.log(game);
 };
