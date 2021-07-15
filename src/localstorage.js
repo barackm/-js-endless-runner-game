@@ -3,12 +3,13 @@ const storage = (() => {
     return JSON.parse(localStorage.getItem(key));
   };
   const set = (key, value) => {
-    return localStorage.setItem(key, JSON.parse(value));
+    return localStorage.setItem(key, JSON.stringify(value));
   };
 
   const remove = (key) => {
     return localStorage.removeItem(key);
   };
+
   return {
     get,
     set,

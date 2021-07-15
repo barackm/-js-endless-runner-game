@@ -1,7 +1,10 @@
+import storage from './localstorage';
+
 const player = (() => {
   const savePlayerName = (player) => {
-    console.log(player);
+    storage.set('player', player);
   };
+
   const storePlayerScore = () => {};
 
   return {

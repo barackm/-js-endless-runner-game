@@ -1,4 +1,6 @@
 import axios from 'axios';
+import dom from './dom';
+import storage from './localstorage';
 
 const createGame = () => {
   const gameName = 'My-Endless-Ranner';
@@ -15,14 +17,24 @@ const createGame = () => {
       name: JSON.stringify(gameName),
     },
   })
-    .then((res) => {})
+    .then((res) => {
+      console.log(res);
+    })
     .catch((ex) => {});
 };
 
+const sort = (obj) => {
+  const array = [];
+  for (let i = 0; i < obj.length; i += 1) {
+    array.push([obj[i].score, obj[i].user]);
+  }
+  return Array.from(array).sort((a, b) => b[0] - a[0]);
+};
+
 const getScores = () => {
-  let scores = [];
+  let result = [];
   const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Utjjs97PsorRmRIQPs34/scores';
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rf7AJIsx6vUkTILvEsu/scores';
   axios({
     method: 'get',
     url: endPoint,
@@ -31,14 +43,17 @@ const getScores = () => {
       'Content-Type': 'application/json',
     },
   }).then((res) => {
-    scores = res.data;
+    const data = res.data;
+    result = sort(data.result);
+    dom.displayScores(result);
   });
-  return scores;
+  return result;
 };
 
-const createScore = (player, score) => {
+const createScore = (score) => {
+  const player = storage.get('player') || '';
   const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Utjjs97PsorRmRIQPs34/scores';
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rf7AJIsx6vUkTILvEsu/scores';
   axios({
     method: 'post',
     url: endPoint,

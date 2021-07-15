@@ -9,8 +9,13 @@ const dom = (() => {
     formWrapper.appendChild(form);
     return container.appendChild(formWrapper);
   };
+
+  const displayScores = (scores) => {
+    console.log(scores);
+  };
   return {
     getPlayerInfo,
+    displayScores,
   };
 })();
 

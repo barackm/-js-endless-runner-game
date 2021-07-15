@@ -10,7 +10,8 @@ window.onload = () => {
   submitInput();
   api.createGame();
   api.getScores();
-  api.createScore('Barack', '300');
+  // api.createScore('Barack', 300);
+
   // const game = api.createGame();
   // console.log(game);
 };
