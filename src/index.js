@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 // import logoImg from './assets/logo.png';
-
+import Settings from './config/settings';
 // class MyGame extends Phaser.Scene {
 //   constructor() {
 //     super();
@@ -58,6 +58,26 @@ class MainScene extends Phaser.Scene {
 
   create() {
     this.sprBack = this.add.image(SCREEN_CX, SCREEN_CY, 'imgBack');
+    this.settings = new Settings(this);
+
+    this.input.keyboard.on(
+      'keydown-P',
+      function () {
+        this.settings.txtPause.text = '[P] Resume';
+        this.scene.pause();
+        this.scene.launch('ScenePause');
+      },
+      this
+    );
+
+    // listener on resume event
+    this.events.on(
+      'resume',
+      function () {
+        this.settings.show();
+      },
+      this
+    );
   }
 
   update(time, delta) {
@@ -87,6 +107,16 @@ class MainScene extends Phaser.Scene {
 class PauseScene extends Phaser.Scene {
   constructor() {
     super({ key: 'ScenePause' });
+  }
+  create() {
+    this.input.keyboard.on(
+      'keydown-P',
+      function () {
+        this.scene.resume('SceneMain');
+        this.scene.stop();
+      },
+      this
+    );
   }
 }
 
