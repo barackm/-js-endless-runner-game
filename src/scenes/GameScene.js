@@ -31,6 +31,7 @@ export default class GameScene extends Phaser.Scene {
     this.load.image('arrow', 'assets/spike.png');
     this.load.image('river', 'assets/river.png');
     this.load.audio('bgMusic', 'assets/music.mp3');
+    this.load.audio('gemSound', 'assets/gem.mp3');
     this.load.image('soundOn', 'assets/sound3.png');
     this.load.image('soundOff', 'assets/sound6.png');
     this.load.spritesheet('dude', 'assets/dude.png', {
@@ -164,7 +165,9 @@ export default class GameScene extends Phaser.Scene {
       fill: '#fff',
     });
 
-    soundOn = this.add.image(25, 100, 'soundOff').setInteractive();
+    soundOn = this.playing
+      ? this.add.image(25, 100, 'soundOff').setInteractive()
+      : this.add.image(25, 100, 'soundOn').setInteractive();
 
     soundOn.on('pointerdown', () => {
       if (this.playing) {
@@ -211,6 +214,8 @@ export default class GameScene extends Phaser.Scene {
   }
 
   collectStar(player, star) {
+    this.liveSound = this.sound.add('gemSound', { volume: 0.5, loop: false });
+    this.liveSound.play();
     star.disableBody(true, true);
 
     score += 10;
@@ -256,7 +261,6 @@ export default class GameScene extends Phaser.Scene {
   }
 
   restart() {
-    console.log('hello world');
     this.scene.restart();
   }
 }

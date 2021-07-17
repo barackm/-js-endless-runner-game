@@ -9,6 +9,7 @@ class Game extends Phaser.Game {
     super(config);
     const music = new Music();
     this.globals = { music, bgMusic: null };
+    this.globals = { music, liveSound: null };
     this.scene.add('Game', GameScene);
     this.scene.add('GameOver', GameOver);
     this.scene.start('Game');

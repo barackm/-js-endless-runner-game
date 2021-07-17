@@ -15,6 +15,7 @@ const dom = (() => {
 
   const displayScores = (scores) => {
     const scoresContainer = document.querySelector('.scoreWrapper');
+    scoresContainer.innerHTML = '';
     const header = document.createElement('div');
     header.classList += 'scoresHeader';
     header.innerHTML = `<h1>Scores</h1><hr/><table class="table">

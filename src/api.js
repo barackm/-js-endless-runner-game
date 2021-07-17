@@ -17,10 +17,8 @@ const createGame = () => {
       name: JSON.stringify(gameName),
     },
   })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((ex) => {});
+    .then(() => {})
+    .catch(() => {});
 };
 
 const sort = (obj) => {
@@ -31,7 +29,7 @@ const sort = (obj) => {
   return Array.from(array).sort((a, b) => b[0] - a[0]);
 };
 
-const getScores = (player) => {
+const getScores = () => {
   let result = [];
   const endPoint =
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
@@ -68,8 +66,8 @@ const createScore = (score) => {
       user: myScore.user,
       score: myScore.score,
     },
-  }).then((res) => {
-    console.log(res);
+  }).then(() => {
+    getScores();
   });
 };
 
