@@ -47,14 +47,13 @@ Now you can open up the index.html file (located in the build directory in chrom
 <p align="center">
     The main objective of the game is to collect as many gems as possible and have the best score by avoiding bombs.
 </p>
-```
+
 1. Enter your name For tracking the score
 2. Click on Play To start the Game
 3. Use the down arrow key to go down
 4. Use the left arrow key to go left
 5. Use the right arrow key to go right
 6. Use Space to fire the bullet
-```
 
 ## Demo Link <a name = "demo"></a>
 
