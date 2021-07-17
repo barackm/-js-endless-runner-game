@@ -22,7 +22,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./assets/7460.jpg');
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541411/samples/7460_bqmgdm.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ form button:hover {
   width: 30%;
   height: 100vh;
   overflow-y: auto;
-  background-image: url('./assets/verticalBg.jpeg');
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541375/samples/verticalBg_si5set.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -97,7 +97,7 @@ table {
 }
 
 .my-header {
-  background-image: url('./assets/button1.png');
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541473/samples/button2_r1nquv.png');
   background-position: 0 -6px;
   background-size: 96% 141%;
   background-repeat: no-repeat;

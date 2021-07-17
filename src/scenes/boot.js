@@ -6,7 +6,7 @@ export default class Boot extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('logo', 'assets/logo.png');
+    this.load.image('logo', 'https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541413/samples/logo_ys8sqa.png');
   }
 
   create() {
