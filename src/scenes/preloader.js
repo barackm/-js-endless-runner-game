@@ -50,21 +50,21 @@ export default class Preloader extends Phaser.Scene {
       },
     });
     assetText.setOrigin(0.5, 0.5);
-    this.load.image('sky', '../../assets/bg.jpg');
-    this.load.image('ground', '../../assets/platform.png');
-    this.load.image('star', '../../assets/jem.png');
-    this.load.image('bomb', '../../assets/bomb.png');
-    this.load.image('arrow', '../../assets/spike.png');
-    this.load.image('river', '../../assets/river.png');
-    this.load.audio('bgMusic', '../../assets/music.mp3');
-    this.load.audio('gemSound', '../../assets/gem.mp3');
-    this.load.image('soundOn', '../../assets/sound3.png');
-    this.load.image('soundOff', '../../assets/sound6.png');
-    this.load.image('btn1', '../../assets/button1.png');
-    this.load.image('btn2', '../../assets/button2.png');
-    this.load.audio('gameoverMusic', '../../assets/gameover.wav');
+    this.load.image('sky', './assets/bg.jpg');
+    this.load.image('ground', './assets/platform.png');
+    this.load.image('star', './assets/jem.png');
+    this.load.image('bomb', './assets/bomb.png');
+    this.load.image('arrow', './assets/spike.png');
+    this.load.image('river', './assets/river.png');
+    this.load.audio('bgMusic', './assets/music.mp3');
+    this.load.audio('gemSound', './assets/gem.mp3');
+    this.load.image('soundOn', './assets/sound3.png');
+    this.load.image('soundOff', './assets/sound6.png');
+    this.load.image('btn1', './assets/button1.png');
+    this.load.image('btn2', './assets/button2.png');
+    this.load.audio('gameoverMusic', './assets/gameover.wav');
 
-    this.load.spritesheet('dude', '../../assets/dude.png', {
+    this.load.spritesheet('dude', './assets/dude.png', {
       frameWidth: 32,
       frameHeight: 48,
     });
@@ -90,16 +90,6 @@ export default class Preloader extends Phaser.Scene {
     });
 
     this.timedEvent = this.time.delayedCall(5000, this.ready, [], this);
-
-    this.load.spritesheet('player', 'assets/RPG_assets.png', {
-      frameWidth: 16,
-      frameHeight: 16,
-    });
-
-    this.load.spritesheet('player2', 'assets/hero1.png', {
-      frameWidth: 105,
-      frameHeight: 110,
-    });
   }
 
   ready() {

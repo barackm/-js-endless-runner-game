@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "test": "jest",
-    "start": "npm run build && npx http-server"
+    "start": "npm run build && npx http-server --open"
   },
   "repository": {
     "type": "git",
