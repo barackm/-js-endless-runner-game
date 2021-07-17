@@ -30,7 +30,7 @@ const sort = (obj) => {
 
 const getScores = () => {
   let result = [];
-  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
+  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kxW1mOoFoAGFar3MjOoW/scores';
   axios({
     method: 'get',
     url: endPoint,
@@ -51,7 +51,7 @@ const createScore = (score) => {
   storage.set('score', score);
   const player = storage.get('player') || '';
   const myScore = { user: player, score };
-  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
+  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kxW1mOoFoAGFar3MjOoW/scores';
   axios({
     method: 'post',
     url: endPoint,
