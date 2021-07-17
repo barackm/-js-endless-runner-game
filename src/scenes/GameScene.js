@@ -96,7 +96,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.load.image('logo', 'assets/jem.png');
 
-    for (let i = 0; i < 1000; i++) {//eslint-disable-line
+    for (let i = 0; i < 500; i++) {//eslint-disable-line
       this.load.image(`logo${i}`, 'assets/jem.png');
     }
   }
