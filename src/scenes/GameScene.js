@@ -39,14 +39,14 @@ export default class GameScene extends Phaser.Scene {
       frameHeight: 48,
     });
 
-    var progressBar = this.add.graphics();
-    var progressBox = this.add.graphics();
+    let progressBar = this.add.graphics();
+    let progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
     progressBox.fillRect(240, 270, 320, 50);
 
-    var width = this.cameras.main.width;
-    var height = this.cameras.main.height;
-    var loadingText = this.make.text({
+    let width = this.cameras.main.width;
+    let height = this.cameras.main.height;
+    let loadingText = this.make.text({
       x: width / 2,
       y: height / 2 - 50,
       text: 'Loading...',
@@ -57,7 +57,7 @@ export default class GameScene extends Phaser.Scene {
     });
     loadingText.setOrigin(0.5, 0.5);
 
-    var percentText = this.make.text({
+    let percentText = this.make.text({
       x: width / 2,
       y: height / 2 - 5,
       text: '0%',
@@ -68,7 +68,7 @@ export default class GameScene extends Phaser.Scene {
     });
     percentText.setOrigin(0.5, 0.5);
 
-    var assetText = this.make.text({
+    let assetText = this.make.text({
       x: width / 2,
       y: height / 2 + 50,
       text: '',
@@ -79,17 +79,17 @@ export default class GameScene extends Phaser.Scene {
     });
     assetText.setOrigin(0.5, 0.5);
 
-    this.load.on('progress', function (value) {
+    this.load.on('progress', (value) => {
       percentText.setText(parseInt(value * 100) + '%');
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
       progressBar.fillRect(250, 280, 300 * value, 30);
     });
 
-    this.load.on('fileprogress', function (file) {
+    this.load.on('fileprogress', (file) => {
       assetText.setText('Loading asset: ' + file.key);
     });
-    this.load.on('complete', function () {
+    this.load.on('complete', () => {
       progressBar.destroy();
       progressBox.destroy();
       loadingText.destroy();
@@ -98,7 +98,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.load.image('logo', 'assets/jem.png');
-    for (var i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1000; i++) {
       this.load.image('logo' + i, 'assets/jem.png');
     }
   }
@@ -149,7 +149,7 @@ export default class GameScene extends Phaser.Scene {
       setXY: { x: 12, y: 0, stepX: 70 },
     });
 
-    stars.children.iterate(function (child) {
+    stars.children.iterate((child) => {
       child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
 
@@ -226,12 +226,12 @@ export default class GameScene extends Phaser.Scene {
         child.enableBody(true, child.x, 0, true, true);
       });
 
-      var x =
+      let x =
         player.x < 400
           ? Phaser.Math.Between(400, 800)
           : Phaser.Math.Between(0, 400);
 
-      var bomb = bombs.create(x, 16, 'bomb');
+      let bomb = bombs.create(x, 16, 'bomb');
       bomb.setBounce(1);
       bomb.setCollideWorldBounds(true);
       bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);

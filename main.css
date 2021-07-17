@@ -5,7 +5,15 @@ body {
 }
 
 .application-wrapper {
-  background-color: teal;
+}
+
+canvas {
+  width: 70%;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
 }
 
 .container {
@@ -64,4 +72,30 @@ form button {
   width: 30%;
   height: 100vh;
   overflow-y: auto;
+  background-image: url('./assets/verticalBg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+table,
+td,
+th {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+table {
+  margin-bottom: 3rem;
+}
+
+.my-header {
+  background-image: url('./assets/button1.png');
+  background-position: 0px -6px;
+  background-size: 96% 141%;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  margin-top: 2rem;
 }

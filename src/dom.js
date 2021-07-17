@@ -18,7 +18,7 @@ const dom = (() => {
     scoresContainer.innerHTML = '';
     const header = document.createElement('div');
     header.classList += 'scoresHeader';
-    header.innerHTML = `<h1>Scores</h1><hr/><table class="table">
+    header.innerHTML = `<h1 class="text-center my-header">Leader Board</h1><hr/><table class="table">
         <thead>
             <tr>
             <th scope="col">#</th>
