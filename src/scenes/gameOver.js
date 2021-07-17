@@ -10,22 +10,34 @@ export default class GameOver extends Phaser.Scene {
   constructor() {
     super('GameOver');
   }
+  preload() {
+    this.load.image('btn1', 'assets/button1.png');
+    this.load.image('btn2', 'assets/button2.png');
+    this.load.audio('gameoverMusic', 'assets/gameover.wav');
+  }
 
   create() {
-    this.menuButton = new Button(
+    this.exitBtn = new Button(this, 400, 400, 'btn1', 'btn2', 'Exit');
+    this.bgMusic = this.sound.add('gameoverMusic', {
+      volume: 0.5,
+      loop: false,
+    });
+    this.bgMusic.play();
+    this.restartBtn = new Button(
       this,
       400,
       400,
-      'blueButton1',
-      'blueButton2',
+      'btn1',
+      'btn2',
       'Restart',
       'Game'
     );
-    this.add.image(400, 270, 'axe');
+
     this.madeByText = this.add.text(0, 60, 'Game Over', {
       fontSize: '26px',
       fill: '#B09B1C',
     });
+
     this.scoreT = this.add.text(0, 0, `Score : ${storage.getCurrentScore()}`, {
       fontSize: '26px',
       fill: '#fff',

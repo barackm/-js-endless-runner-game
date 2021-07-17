@@ -12,6 +12,7 @@ let gameOver = false;
 let scoreText;
 let playerText;
 let arrows;
+let soundOn;
 let button;
 let startButton;
 
@@ -19,6 +20,7 @@ export default class GameScene extends Phaser.Scene {
   constructor() {
     super('Game');
     this.myPlayer = storage.get('player');
+    this.paying = true;
   }
 
   preload() {
@@ -28,6 +30,9 @@ export default class GameScene extends Phaser.Scene {
     this.load.image('bomb', 'assets/bomb.png');
     this.load.image('arrow', 'assets/spike.png');
     this.load.image('river', 'assets/river.png');
+    this.load.audio('bgMusic', 'assets/music.mp3');
+    this.load.image('soundOn', 'assets/sound3.png');
+    this.load.image('soundOff', 'assets/sound6.png');
     this.load.spritesheet('dude', 'assets/dude.png', {
       frameWidth: 32,
       frameHeight: 48,
@@ -109,6 +114,8 @@ export default class GameScene extends Phaser.Scene {
 
     platforms.create(450, 350, 'arrow');
     player = this.physics.add.sprite(100, 450, 'dude');
+    this.bgMusic = this.sound.add('bgMusic', { volume: 0.5, loop: true });
+    this.bgMusic.play();
 
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
@@ -155,6 +162,18 @@ export default class GameScene extends Phaser.Scene {
     playerText = this.add.text(16, 50, `Player: ${this.myPlayer}`, {
       fontSize: '22px',
       fill: '#fff',
+    });
+
+    soundOn = this.add.image(25, 100, 'soundOff').setInteractive();
+
+    soundOn.on('pointerdown', () => {
+      if (this.playing) {
+        this.bgMusic.play();
+        this.playing = false;
+      } else {
+        this.bgMusic.stop();
+        this.playing = true;
+      }
     });
 
     this.physics.add.collider(player, platforms);
@@ -216,19 +235,9 @@ export default class GameScene extends Phaser.Scene {
   }
 
   hitBomb(player, bomb) {
-    // this.physics.pause();
-    // let gameOverText = this.add.text(300, 300, 'GAME OVER \nScore: ' + score, {
-    //   fontSize: '42px',
-    //   fill: '#fff',
-    // });
-
-    // gameOverText.setDepth(1);
-    // player.setTint(0xff0000);
-    // player.anims.play('turn');
-
-    // gameOver = true;
     api.createScore(score);
-    this.scene.sleep('Game');
+    this.scene.stop('Game');
+    this.bgMusic.stop();
     this.scene.start('GameOver');
   }
 
