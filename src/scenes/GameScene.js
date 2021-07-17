@@ -21,17 +21,17 @@ export default class GameScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('sky', 'assets/bg.jpg');
-    this.load.image('ground', 'assets/platform.png');
-    this.load.image('star', 'assets/jem.png');
-    this.load.image('bomb', 'assets/bomb.png');
-    this.load.image('arrow', 'assets/spike.png');
-    this.load.image('river', 'assets/river.png');
-    this.load.audio('bgMusic', 'assets/music.mp3');
-    this.load.audio('gemSound', 'assets/gem.mp3');
-    this.load.image('soundOn', 'assets/sound3.png');
-    this.load.image('soundOff', 'assets/sound6.png');
-    this.load.spritesheet('dude', 'assets/dude.png', {
+    this.load.image('sky', '../../assets/bg.jpg');
+    this.load.image('ground', '../../assets/platform.png');
+    this.load.image('star', '../../assets/jem.png');
+    this.load.image('bomb', '../../assets/bomb.png');
+    this.load.image('arrow', '../../assets/spike.png');
+    this.load.image('river', '../../assets/river.png');
+    this.load.audio('bgMusic', '../../assets/music.mp3');
+    this.load.audio('gemSound', '../../assets/gem.mp3');
+    this.load.image('soundOn', '../../assets/sound3.png');
+    this.load.image('soundOff', '../../assets/sound6.png');
+    this.load.spritesheet('dude', '../../assets/dude.png', {
       frameWidth: 32,
       frameHeight: 48,
     });
@@ -94,10 +94,10 @@ export default class GameScene extends Phaser.Scene {
       assetText.destroy();
     });
 
-    this.load.image('logo', 'assets/jem.png');
+    this.load.image('logo', '../../assets/jem.png');
 
     for (let i = 0; i < 500; i++) {//eslint-disable-line
-      this.load.image(`logo${i}`, 'assets/jem.png');
+      this.load.image(`logo${i}`, '../../assets/jem.png');
     }
   }
 
