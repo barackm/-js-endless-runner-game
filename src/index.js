@@ -1,19 +1,11 @@
-// import api from './API';
 import api from './api';
 import dom from './dom';
 import player from './player';
-// import api from './api';
 
 window.onload = () => {
-  console.log('helloooo');
+  api.createGame();
   dom.getPlayerInfo();
   submitInput();
-  api.createGame();
-  api.getScores();
-  // api.createScore('Barack', 300);
-
-  // const game = api.createGame();
-  // console.log(game);
 };
 
 const submitInput = () => {

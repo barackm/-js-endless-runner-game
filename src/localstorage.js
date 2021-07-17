@@ -10,10 +10,19 @@ const storage = (() => {
     return localStorage.removeItem(key);
   };
 
+  const getCurrentScore = () => {
+    return JSON.parse(localStorage.getItem('score')) || 0;
+  };
+  const getHighestScore = () => {
+    return JSON.parse(localStorage.getItem('highScore'));
+  };
+
   return {
     get,
     set,
+    getCurrentScore,
     remove,
+    getHighestScore,
   };
 })();
 export default storage;

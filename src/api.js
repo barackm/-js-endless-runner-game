@@ -31,10 +31,10 @@ const sort = (obj) => {
   return Array.from(array).sort((a, b) => b[0] - a[0]);
 };
 
-const getScores = () => {
+const getScores = (player) => {
   let result = [];
   const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rf7AJIsx6vUkTILvEsu/scores';
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
   axios({
     method: 'get',
     url: endPoint,
@@ -45,15 +45,18 @@ const getScores = () => {
   }).then((res) => {
     const data = res.data;
     result = sort(data.result);
+    storage.set('highScore', result[0]);
     dom.displayScores(result);
   });
   return result;
 };
 
 const createScore = (score) => {
+  storage.set('score', score);
   const player = storage.get('player') || '';
+  const myScore = { user: player, score };
   const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rf7AJIsx6vUkTILvEsu/scores';
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
   axios({
     method: 'post',
     url: endPoint,
@@ -62,8 +65,8 @@ const createScore = (score) => {
       'Content-Type': 'application/json',
     },
     data: {
-      user: player,
-      score: score,
+      user: myScore.user,
+      score: myScore.score,
     },
   }).then((res) => {
     console.log(res);
