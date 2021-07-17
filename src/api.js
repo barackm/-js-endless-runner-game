@@ -16,7 +16,7 @@ const createGame = () => {
       name: JSON.stringify(gameName),
     },
   })
-    .then(() => {})
+    .then((res) => res.data)
     .catch(() => {});
 };
 
