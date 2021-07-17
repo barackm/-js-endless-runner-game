@@ -33,6 +33,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      assets: path.join(__dirname, './assets'),
+    },
+  },
 
   plugins: [
     new webpack.DefinePlugin({

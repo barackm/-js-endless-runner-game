@@ -47,6 +47,7 @@
     "babel-polyfill": "^6.26.0",
     "node-fetch": "^2.6.1",
     "phaser": "^3.55.2",
+    "phaser-webpack-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.4",
     "webpack-merge": "^5.8.0"
   }

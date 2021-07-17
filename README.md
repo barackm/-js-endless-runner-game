@@ -11,7 +11,7 @@
 <a href="#sc">Screenshot</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#start">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#play">Game Instructions</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#ll">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#demo">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 </p>
 
@@ -56,7 +56,7 @@ Now you can open up the index.html file (located in the build directory in chrom
 6. Use Space to fire the bullet
 ```
 
-## Demo Link
+## Demo Link <a name = "demo"></a>
 
 [Demo]()
 
