@@ -2,7 +2,7 @@
 
 # Endless Runner
 
-> Endless Runner is a game built in JavaScript characterized as an action game, linear in design with no end, without pauses or breaks for rest, and no stages or changing levels. It has one continuous level. The game difficulty starts slow and easy.
+> Endless Runner is a game built in JavaScript characterized as an action game, linear in design with no end, without pauses or breaks for rest, and no stages or changing levels. It has one continuous level. The game's difficulty starts slow and easy.
 
 ## 📝 Contents
 
