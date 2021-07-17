@@ -7,7 +7,7 @@ const dom = (() => {
     formWrapper.classList += 'form-main-wrapper';
     const form = document.createElement('form');
     form.setAttribute('id', 'form');
-    form.innerHTML = `<input type='text' required class='name-input' placeholder='Enter your name'/> <button type='submit'>Continue</button>`;
+    form.innerHTML = '<input type=\'text\' required class=\'name-input\' placeholder=\'Enter your name\'/> <button type=\'submit\'>Continue</button>';
     formWrapper.appendChild(form);
     wrapper.appendChild(formWrapper);
     return container.appendChild(wrapper);
@@ -27,15 +27,15 @@ const dom = (() => {
             </tr>
         </thead>
         ${scores.map(
-          (score, index) => `
+    (score, index) => `
           <tbody>
             <tr>
               <th scope="row">${index + 1}</th>
               <td>${score[1]}</td>
               <td>${score[0]}</td>
             </tr>
-          </tbody>`
-        )}
+          </tbody>`,
+  )}
     </table>`;
 
     scoresContainer.appendChild(header);

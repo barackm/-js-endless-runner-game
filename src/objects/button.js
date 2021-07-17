@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 
 export default class Button extends Phaser.GameObjects.Container {
   constructor(scene, x, y, key1, key2, text, targetScene) {
@@ -21,7 +21,7 @@ export default class Button extends Phaser.GameObjects.Container {
         this.scene.scene.sleep('GameOver');
         this.scene.scene.start('Game');
       } else {
-        location.reload(true);
+        window.location.reload(true);
       }
     });
 

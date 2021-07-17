@@ -4,8 +4,7 @@ import storage from './localstorage';
 
 const createGame = () => {
   const gameName = 'My-Endless-Ranner';
-  const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   axios({
     method: 'post',
     url: endPoint,
@@ -31,8 +30,7 @@ const sort = (obj) => {
 
 const getScores = () => {
   let result = [];
-  const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
+  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
   axios({
     method: 'get',
     url: endPoint,
@@ -41,7 +39,7 @@ const getScores = () => {
       'Content-Type': 'application/json',
     },
   }).then((res) => {
-    const data = res.data;
+    const { data } = res;
     result = sort(data.result);
     storage.set('highScore', result[0]);
     dom.displayScores(result);
@@ -53,8 +51,7 @@ const createScore = (score) => {
   storage.set('score', score);
   const player = storage.get('player') || '';
   const myScore = { user: player, score };
-  const endPoint =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
+  const endPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1rH0MSSJmOLLRS7YU5oQ/scores';
   axios({
     method: 'post',
     url: endPoint,
@@ -72,5 +69,3 @@ const createScore = (score) => {
 };
 
 export default { createGame, getScores, createScore };
-
-// Utjjs97PsorRmRIQPs34

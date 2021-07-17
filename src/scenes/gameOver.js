@@ -1,15 +1,14 @@
-import 'phaser';
-// import config from '../Config/config';
+import Phaser from 'phaser';
 import config from '../config/config';
 
-import Button from '../Objects/Button';
+import Button from '../objects/button';
 import storage from '../localstorage';
-import api from '../api';
 
 export default class GameOver extends Phaser.Scene {
   constructor() {
     super('GameOver');
   }
+
   preload() {
     this.load.image('btn1', 'assets/button1.png');
     this.load.image('btn2', 'assets/button2.png');
@@ -30,7 +29,7 @@ export default class GameOver extends Phaser.Scene {
       'btn1',
       'btn2',
       'Restart',
-      'Game'
+      'Game',
     );
 
     this.madeByText = this.add.text(0, 60, 'Game Over', {
@@ -46,14 +45,14 @@ export default class GameOver extends Phaser.Scene {
       0,
       0,
       `Highest Score ${storage.getHighestScore()[0]}`,
-      { fontSize: '26px', fill: '#fff' }
+      { fontSize: '26px', fill: '#fff' },
     );
 
     this.zone = this.add.zone(
       config.width / 2,
       config.height / 2,
       config.width,
-      config.height
+      config.height,
     );
 
     [this.madeByText, this.scoreT, this.highScoreT].forEach((el) => {

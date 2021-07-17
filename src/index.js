@@ -2,12 +2,6 @@ import api from './api';
 import dom from './dom';
 import player from './player';
 
-window.onload = () => {
-  api.createGame();
-  dom.getPlayerInfo();
-  submitInput();
-};
-
 const submitInput = () => {
   const form = document.getElementById('form');
   form.addEventListener('submit', (e) => {
@@ -16,4 +10,10 @@ const submitInput = () => {
     player.savePlayerName(name.value);
     name.value = '';
   });
+};
+
+window.onload = () => {
+  api.createGame();
+  dom.getPlayerInfo();
+  submitInput();
 };

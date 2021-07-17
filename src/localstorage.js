@@ -1,21 +1,11 @@
 const storage = (() => {
-  const get = (key) => {
-    return JSON.parse(localStorage.getItem(key));
-  };
-  const set = (key, value) => {
-    return localStorage.setItem(key, JSON.stringify(value));
-  };
+  const get = (key) => JSON.parse(localStorage.getItem(key));
+  const set = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 
-  const remove = (key) => {
-    return localStorage.removeItem(key);
-  };
+  const remove = (key) => localStorage.removeItem(key);
 
-  const getCurrentScore = () => {
-    return JSON.parse(localStorage.getItem('score')) || 0;
-  };
-  const getHighestScore = () => {
-    return JSON.parse(localStorage.getItem('highScore'));
-  };
+  const getCurrentScore = () => JSON.parse(localStorage.getItem('score')) || 0;
+  const getHighestScore = () => JSON.parse(localStorage.getItem('highScore'));
 
   return {
     get,
