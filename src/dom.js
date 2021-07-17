@@ -4,7 +4,7 @@ const dom = (() => {
     const wrapper = document.createElement('div');
     const instructions = document.createElement('div');
     instructions.classList += 'instructions-wraper';
-    instructions.innerHTML = "<h1>Welcome to Endless Runner</h1><p>Use the direction keys to avoid bumbs and collect gems.</p><img src='https://png2.cleanpng.com/sh/540fd57910e2fd150048346b2c8278b8/L0KzQYm3VMIzN6ZofZH0aYP2gLBuTfNwdaF6jNd7LXvoibP2ggJlNZJ3itHCLXvoicS0gBxqeF5miuY2NXHnc7K6UcMzP2Q1eqk3OEW5Q4e7UMMyPWM5TKIEMUC6QYe3Vb5xdpg=/kisspng-computer-keyboard-arrow-keys-clip-art-5adca3132730b7.8563640315244091071605.png'></img>";
+    instructions.innerHTML = "<h1>Welcome to Endless Runner</h1><p>Use the direction keys to avoid bombs and collect gems.</p><img src='https://png2.cleanpng.com/sh/540fd57910e2fd150048346b2c8278b8/L0KzQYm3VMIzN6ZofZH0aYP2gLBuTfNwdaF6jNd7LXvoibP2ggJlNZJ3itHCLXvoicS0gBxqeF5miuY2NXHnc7K6UcMzP2Q1eqk3OEW5Q4e7UMMyPWM5TKIEMUC6QYe3Vb5xdpg=/kisspng-computer-keyboard-arrow-keys-clip-art-5adca3132730b7.8563640315244091071605.png'></img>";
     wrapper.classList += 'container';
     const overlay = document.createElement('div');
     overlay.classList += 'overlay';
