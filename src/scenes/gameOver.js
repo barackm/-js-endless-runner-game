@@ -9,12 +9,6 @@ export default class GameOver extends Phaser.Scene {
     super('GameOver');
   }
 
-  preload() {
-    this.load.image('btn1', '../../assets/button1.png');
-    this.load.image('btn2', '../../assets/button2.png');
-    this.load.audio('gameoverMusic', '../../assets/gameover.wav');
-  }
-
   create() {
     this.exitBtn = new Button(this, 400, 400, 'btn1', 'btn2', 'Exit');
     this.bgMusic = this.sound.add('gameoverMusic', {
@@ -44,7 +38,7 @@ export default class GameOver extends Phaser.Scene {
     this.highScoreT = this.add.text(
       0,
       0,
-      `Highest Score ${storage.getHighestScore()[0]}`,
+      `Last Highest Score ${storage.getHighestScore()[0]}`,
       { fontSize: '26px', fill: '#fff' },
     );
 
