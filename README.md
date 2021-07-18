@@ -1,49 +1,113 @@
-# Phaser 3 Webpack Project Template
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
+# Endless Runner
 
-This has been updated for Phaser 3.50.0 version and above.
+> Endless Runner is a game built in JavaScript characterized as an action game, linear in design with no end, without pauses or breaks for rest, and no stages or changing levels. It has one continuous level. The game's difficulty starts slow and easy.
 
-Loading images via JavaScript module `import` is also supported, although not recommended.
+## 📝 Contents
 
-## Requirements
+<p align="center">
+<a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#sc">Screenshot</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#start">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#play">Game Instructions</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#demo">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#author">Author</a>
+</p>
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+## Built With <a name = "with"></a>
 
-## Available Commands
+- Javascript
+- Phaser3
+- CSS
+- Webpack
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm start` | Build project and open web server running project |
-| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+## Screenshots <a name = "sc"></a>
 
-## Writing Code
+![screenshot](assets/logo.png)
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
+## Getting Started <a name = "start"></a>
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
+**To get the local copy of the project up and running you will need to run the following commands on your terminal:**
 
-## Customizing the Template
+`git clone https://github.com/barackm/js-endless-runner-game`
 
-### Babel
+To install all the available dependecies run:
+`npm install`
 
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+To bundle and transpile the javascript code using webpack run:
+`npm run build` for production, or:
+`npm start` for development.
 
- ```
-"browsers": [
-  ">0.25%",
-  "not ie 11",
-  "not op_mini all"
-]
- ```
+Now you can open up the index.html file (located in the build directory in chrome) to see the result.
 
-### Webpack
+## Game Instructions <a name = "play"></a>
 
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
+<p align="center">
+    The main objective of the game is to collect as many gems as possible and have the best score by avoiding bombs.
+</p>
 
-## Deploying Code
+This is the Player, He can move at all positions.
 
-After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
+![screenshot](./my-player.png)
 
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.
+1. Enter your name For tracking the score
+
+![screenshot](./screenshot1.png)
+
+2. Click on Play To start the Game
+
+![screenshot](./screenshot3.png)
+
+3. Use the down arrow key to go down
+
+![screenshot](./screenshot2.png)
+
+4. Use the left arrow key to go left
+5. Use the right arrow key to go right
+
+![screenshot](https://png2.cleanpng.com/sh/540fd57910e2fd150048346b2c8278b8/L0KzQYm3VMIzN6ZofZH0aYP2gLBuTfNwdaF6jNd7LXvoibP2ggJlNZJ3itHCLXvoicS0gBxqeF5miuY2NXHnc7K6UcMzP2Q1eqk3OEW5Q4e7UMMyPWM5TKIEMUC6QYe3Vb5xdpg=/kisspng-computer-keyboard-arrow-keys-clip-art-5adca3132730b7.8563640315244091071605.png)
+
+6. Collect Gems
+
+![screenshot](./assets/jem.png)
+
+7. If you fail the game you can either Restart or exit
+
+![screenshot](./screenshot4.png)
+
+## Demo Link <a name = "demo"></a>
+
+[Demo](https://objective-lewin-3b30a9.netlify.app/)
+
+## Run the tests
+
+To run the tests that are located in the spec folder just run `npm test`
+
+## Authors <a name = "author"></a>
+
+👤 **Barack Mukelenga**
+
+- GitHub: [@barackm](https://github.com/barackm)
+- Twitter: [@BarackMukelenga](https://twitter.com/BarackMukelenga)
+- LinkedIn: [Baraka Mukelenga](https://www.linkedin.com/in/baraka-mukelenga/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/barackm/js-endless-runner-game/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!❤️❤️❤️
+
+## Acknowledgments
+
+- Microverse
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Baraka Mukelenga

@@ -1,0 +1,142 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  width: 70%;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541411/samples/7460_bqmgdm.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.form-main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  border: 2px solid orange;
+  background-color: transparent;
+  padding: 0.7rem;
+  outline: none;
+  width: 20rem;
+  color: orange;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: orange;
+}
+
+form button {
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid orange;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+form button:hover {
+  background-color: orange;
+}
+
+.application-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.scoreWrapper {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  overflow-y: auto;
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541375/samples/verticalBg_si5set.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+table,
+td,
+th {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+table {
+  margin-bottom: 3rem;
+}
+
+.my-header {
+  background-image: url('https://res.cloudinary.com/fidbagraphicscode/image/upload/v1626541473/samples/button2_r1nquv.png');
+  background-position: 0 -6px;
+  background-size: 96% 141%;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.instructions-wraper {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.instructions-wraper img {
+  width: 8rem;
+  height: 6rem;
+}
+
+.instructions-wraper h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.instructions-wraper p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.452);
+  z-index: -1;
+}

@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --config webpack/prod.js ",
-    "start": "webpack serve --config webpack/base.js --open"
+    "build": "webpack --mode production",
+    "test": "jest",
+    "start": "npm run build && npx http-server --open"
   },
   "repository": {
     "type": "git",
@@ -21,18 +22,33 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^6.0.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
     "raw-loader": "^4.0.2",
-    "terser-webpack-plugin": "^5.1.4",
+    "style-loader": "^3.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0",
     "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.8.0"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "phaser": "^3.55.2"
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
+    "node-fetch": "^2.6.1",
+    "phaser": "^3.55.2",
+    "phaser-webpack-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.4",
+    "webpack-merge": "^5.8.0"
   }
 }
