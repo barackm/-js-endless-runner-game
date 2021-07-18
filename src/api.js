@@ -17,7 +17,9 @@ const createGame = () => {
     },
   })
     .then((res) => res.data)
-    .catch(() => {});
+    .catch((ex) => {
+      dom.showAlert(ex.message);
+    });
 };
 
 const sort = (obj) => {
@@ -43,6 +45,8 @@ const getScores = () => {
     result = sort(data.result);
     storage.set('highScore', result[0]);
     dom.displayScores(result);
+  }).catch((ex) => {
+    dom.showAlert(ex.message);
   });
   return result;
 };
@@ -65,6 +69,8 @@ const createScore = (score) => {
     },
   }).then(() => {
     getScores();
+  }).catch((ex) => {
+    dom.showAlert(ex.message);
   });
 };
 

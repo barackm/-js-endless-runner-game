@@ -48,9 +48,14 @@ const dom = (() => {
     scoresContainer.appendChild(header);
   };
 
+  const showAlert = (message) => {
+    window.alert(message);
+  };
+
   return {
     getPlayerInfo,
     displayScores,
+    showAlert,
   };
 })();
 
