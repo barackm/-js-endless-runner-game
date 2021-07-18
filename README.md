@@ -57,7 +57,7 @@ This is the Player, He can move at all positions.
 
 2. Click on Play To start the Game
 
-![screenshot](./screnshot3.png)
+![screenshot](./screenshot3.png)
 
 3. Use the down arrow key to go down
 
@@ -74,7 +74,7 @@ This is the Player, He can move at all positions.
 
 7. If you fail the game you can either Restart or exit
 
-![screenshot](./screnshot4.png)
+![screenshot](./screenshot4.png)
 
 ## Demo Link <a name = "demo"></a>
 
