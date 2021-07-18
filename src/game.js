@@ -1,11 +1,11 @@
 import Phaser from 'phaser';
 import config from './config/config';
 import GameScene from './scenes/GameScene';
-import GameOver from './scenes/gameOver';
-import Music from './objects/music';
-import Preloader from './scenes/preloader';
-import Boot from './scenes/boot';
-import Title from './scenes/title';
+import GameOver from './scenes/GameOver';
+import Music from './objects/Music';
+import Preloader from './scenes/Preloader';
+import Boot from './scenes/Boot';
+import Title from './scenes/Title';
 
 class Game extends Phaser.Game {
   constructor() {
