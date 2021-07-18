@@ -18,7 +18,6 @@ export default class Button extends Phaser.GameObjects.Container {
 
     this.button.on('pointerdown', () => {
       if (targetScene) {
-        // this.scene.scene.sleep();
         this.scene.scene.start(targetScene);
       } else {
         window.location.reload(true);
