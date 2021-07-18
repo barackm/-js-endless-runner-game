@@ -24,8 +24,7 @@
 
 ## Screenshots <a name = "sc"></a>
 
-![screenshot](./screenshot1.png)
-![screenshot](./screenshot2.png)
+![screenshot](assets/logo.png)
 
 ## Getting Started <a name = "start"></a>
 
@@ -48,12 +47,34 @@ Now you can open up the index.html file (located in the build directory in chrom
     The main objective of the game is to collect as many gems as possible and have the best score by avoiding bombs.
 </p>
 
+This is the Player, He can move at all positions.
+
+![screenshot](./my-player.png)
+
 1. Enter your name For tracking the score
+
+![screenshot](./screenshot1.png)
+
 2. Click on Play To start the Game
+
+![screenshot](./screenshot3.png)
+
 3. Use the down arrow key to go down
+
+![screenshot](./screenshot2.png)
+
 4. Use the left arrow key to go left
 5. Use the right arrow key to go right
-6. Use Space to fire the bullet
+
+![screenshot](https://png2.cleanpng.com/sh/540fd57910e2fd150048346b2c8278b8/L0KzQYm3VMIzN6ZofZH0aYP2gLBuTfNwdaF6jNd7LXvoibP2ggJlNZJ3itHCLXvoicS0gBxqeF5miuY2NXHnc7K6UcMzP2Q1eqk3OEW5Q4e7UMMyPWM5TKIEMUC6QYe3Vb5xdpg=/kisspng-computer-keyboard-arrow-keys-clip-art-5adca3132730b7.8563640315244091071605.png)
+
+6. Collect Gems
+
+![screenshot](./assets/jem.png)
+
+7. If you fail the game you can either Restart or exit
+
+![screenshot](./screenshot4.png)
 
 ## Demo Link <a name = "demo"></a>
 
