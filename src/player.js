@@ -1,6 +1,6 @@
 import storage from './localstorage';
 import api from './api';
-import Game from './Game';
+import Game from './game';
 
 const player = (() => {
   const savePlayerName = (player) => {
