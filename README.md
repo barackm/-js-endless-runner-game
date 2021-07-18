@@ -84,3 +84,9 @@ Give a ⭐️ if you like this project!❤️❤️❤️
 ## Acknowledgments
 
 - Microverse
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Baraka Mukelenga
