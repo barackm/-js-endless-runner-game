@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 import config from './config/config';
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import GameScene from './scenes/gameScene';
 import GameOver from './scenes/gameOver';
 import Music from './objects/music';
